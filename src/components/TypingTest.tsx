@@ -58,13 +58,13 @@ const TypingTest: React.FC<TypingTestProps> = ({ testText }) => {
         value={inputText}
         onChange={handleChange}
         className="w-full p-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-        placeholder="Comece a digitar aqui..."
+        placeholder="Start typing here..."
       />
       <div className="mt-4">
-        <p>Tempo: {time} segundos</p>
-        <p>Caracteres Corretos: {correctChars}</p>
-        <p>Precisão: {accuracy.toFixed(2)}%</p>
-        <p>Palavras por Minuto (WPM): {wpm}</p>
+        <p>Time: {time} seconds</p>
+        <p>Correct Chars: {correctChars}</p>
+        <p>Accuracy: {accuracy.toFixed(2)}%</p>
+        <p>Words Per Minute (WPM): {wpm}</p>
       </div>
     </div>
   );
