@@ -4,16 +4,15 @@ import { useState } from 'react';
 import TypingTest from '../components/TypingTest';
 import useTheme from '../hooks/useTheme';
 import { FaMoon, FaSun } from 'react-icons/fa';
-import { useTranslation } from 'next-i18next'; 
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import Navbar from '@/components/Navbar';
 
 const Home = () => {
   const { theme, toggleTheme } = useTheme();
   const [difficulty, setDifficulty] = useState<'easy' | 'medium' | 'hard'>('easy');
   const [isStarted, setIsStarted] = useState<boolean>(false);
-  const { t, i18n } = useTranslation(); // Inclui o idioma atual
-  
+  const { t, i18n } = useTranslation();
+
   const texts = {
     en: {
       easy: [
@@ -51,7 +50,6 @@ const Home = () => {
     }
   };
 
-  // Função para obter texto aleatório
   const getRandomText = (language: 'en' | 'pt', difficulty: 'easy' | 'medium' | 'hard'): string => {
     const options = texts[language][difficulty];
     const randomIndex = Math.floor(Math.random() * options.length);
@@ -61,7 +59,7 @@ const Home = () => {
   const handleStart = () => {
     const randomText = getRandomText(i18n.language as 'en' | 'pt', difficulty);
     setIsStarted(true);
-    console.log(randomText); // Testando para ver o texto sorteado
+    console.log(randomText); // Para testar o texto sorteado
   };
 
   const handleReset = () => {
@@ -75,9 +73,8 @@ const Home = () => {
 
   return (
     <div className={`flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 p-6 relative`}>
-
       <Navbar />
-      
+
       <button
         onClick={toggleTheme}
         className="absolute top-4 left-4 flex items-center space-x-2 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-lg shadow-lg"
@@ -91,7 +88,6 @@ const Home = () => {
           <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{t('title')}</h1>
         </div>
 
-        {/* Seletor de dificuldade */}
         <div className="mb-4">
           <label className="mr-4 text-gray-700 dark:text-gray-300">{t('difficulty')}</label>
           <select 
@@ -105,7 +101,6 @@ const Home = () => {
           </select>
         </div>
 
-        {/* Botão para iniciar */}
         {!isStarted ? (
           <button 
             onClick={handleStart} 
@@ -120,11 +115,5 @@ const Home = () => {
     </div>
   );
 };
-
-export const getStaticProps = async ({ locale }: { locale: string }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ['common'])),
-  },
-});
 
 export default Home;
