@@ -1,11 +1,11 @@
-import { appWithTranslation } from 'next-i18next';
 import { Inter } from 'next/font/google';
+import "./globals.css";
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Typing Speed Test',
-  description: 'Test your typing speed in multiple languages!',
+  description: 'Test your typing speed in English!',
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
@@ -14,4 +14,4 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
   </html>
 );
 
-export default appWithTranslation(RootLayout);
+export default RootLayout;
