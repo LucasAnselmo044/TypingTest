@@ -72,15 +72,15 @@ const TypingTest: React.FC<TypingTestProps> = ({ testText, onReset }) => {
 
   return (
     <div>
-      <p className="mb-4 text-gray-600">{testText}</p>
+      <p className="mb-4 dark:text-white text-black">{testText}</p>
       <textarea
         value={inputText}
         onChange={handleChange}
-        className="w-full p-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        className="w-full p-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 text-black focus:ring-indigo-500"
         placeholder="Comece a digitar aqui..."
         disabled={isComplete}
       />
-      <div className="mt-4">
+      <div className="mt-4 dark:text-white text-black">
         <p>Tempo: {time} segundos</p>
         <p>Caracteres Corretos: {correctChars}</p>
         <p>Precisão: {accuracy.toFixed(2)}%</p>

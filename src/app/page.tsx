@@ -12,28 +12,28 @@ const Home = () => {
 
   const texts = {
     easy: [
-      "The quick brown fox jumps over the lazy dog.",
-      "An apple a day keeps the doctor away.",
-      "A watched pot never boils.",
-      "Better late than never.",
-      "Beauty is in the eye of the beholder.",
-      "When life gives you lemons, make lemonade.",
-      "Actions speak louder than words.",
-      "The early bird catches the worm.",
-      "Honesty is the best policy.",
-      "Two heads are better than one."
+      "The rapid progression of computational theory has created unforeseen challenges, leading to groundbreaking discoveries in algorithmic complexity.",
+      "The systemic effects of technology in modern society transcend conventional boundaries, reshaping communication, economics, and governance structures.",
+      "Emerging paradigms in software engineering advocate for architectural cohesion in distributed systems, ensuring that scalability and fault tolerance are seamlessly integrated.",
+      "Advanced neural networks are increasingly demonstrating their capabilities in pattern recognition, yielding insights with profound implications for predictive analytics.",
+      "Data storage methodologies are evolving with cloud architecture, enabling scalable, on-demand computational resources to facilitate unprecedented global collaboration.",
+      "The infusion of artificial intelligence within traditional industries is augmenting operational workflows, thereby enhancing both productivity and decision-making accuracy.",
+      "The intersection of quantum mechanics and computational theory is fostering the development of algorithms capable of solving previously intractable problems.",
+      "Agile methodologies in software development prioritize iterative progress, leveraging continuous feedback loops to optimize project deliverables.",
+      "Decentralized finance (DeFi) is rapidly reshaping the landscape of financial transactions by leveraging blockchain technology for enhanced transparency and security.",
+      "The ethical considerations surrounding AI development demand robust frameworks to ensure fairness, accountability, and transparency in algorithmic decision-making."
     ],
     medium: [
-      "The fundamental goal of programming is problem-solving and logical thinking.",
-      "JavaScript is a versatile language that powers dynamic websites and apps.",
-      "Cloud computing is revolutionizing data storage and accessibility for users.",
-      "Understanding algorithms can optimize coding efficiency and performance.",
-      "The journey of software development is a blend of creativity and logic.",
-      "Debugging code is an essential skill for all developers to master.",
-      "Artificial intelligence aims to mimic human cognition and decision-making.",
-      "Version control with Git allows collaborative code management.",
-      "Data analysis requires a solid grasp of statistical concepts.",
-      "APIs enable applications to interact and share functionalities efficiently."
+      "The foundation of modern programming paradigms lies in robust problem-solving frameworks, with a strong emphasis on computational efficiency and algorithmic optimization.",
+      "JavaScript's event-driven architecture, particularly within the Node.js environment, enables real-time applications to seamlessly integrate server-side logic with client-side interactivity.",
+      "Cloud computing platforms, such as AWS and Google Cloud, are pioneering a shift towards multi-cloud architectures, providing businesses with unparalleled flexibility and cost efficiency.",
+      "Algorithmic complexity, particularly within the realm of NP-complete problems, requires advanced heuristic approaches to approximate optimal solutions within a feasible time frame.",
+      "The multidisciplinary nature of software engineering mandates a holistic approach to both front-end and back-end integration, ensuring the seamless delivery of user-centric solutions.",
+      "Mastering debugging techniques, such as breakpoints, stack tracing, and dynamic code analysis, is essential for optimizing code performance and identifying hidden bottlenecks.",
+      "The advent of artificial intelligence in healthcare leverages predictive models to enhance diagnostic accuracy, while simultaneously reducing operational overhead in medical institutions.",
+      "Version control practices, particularly when utilizing Git, facilitate the collaborative development of software by enabling distributed teams to track code changes and resolve conflicts efficiently.",
+      "Data analysis methodologies increasingly rely on big data techniques, harnessing distributed computing power to extract actionable insights from vast datasets.",
+      "The integration of APIs allows disparate software systems to communicate effectively, streamlining data exchange and enhancing overall system interoperability."
     ],
     hard: [
       "Artificial intelligence and machine learning are revolutionizing industries by enabling computers to analyze massive amounts of data, identify patterns, and make decisions with minimal human intervention, which has a profound impact on fields like healthcare, finance, and transportation.",
@@ -47,6 +47,7 @@ const Home = () => {
       "Blockchain technology, originally conceived for digital currencies, has expanded into various domains, enabling decentralized applications that provide security, transparency, and trust without relying on centralized authorities.",
       "Natural language processing is an interdisciplinary field that combines linguistics, computer science, and artificial intelligence to enable machines to understand, interpret, and respond to human language in a meaningful and contextually relevant manner."
     ]
+    
   };
 
   const getRandomText = (difficulty: 'easy' | 'medium' | 'hard'): string => {
